@@ -36,7 +36,7 @@ class _UploadScreenState extends State<UploadScreen> {
         title: Text(
           "Complete Your Profile",
           style: TextStyles.body.copyWith(
-            color: Colors.black,
+            color:context.theme.colorScheme.onSurface,
             fontSize: 22,
             fontWeight: FontWeight.w600,
           ),
@@ -91,7 +91,7 @@ class _UploadScreenState extends State<UploadScreen> {
                           child: Text(
                             "Profile Image",
                             style: TextStyles.body.copyWith(
-                              color: context.colorScheme.tertiary,
+                              color: context.colorScheme.onSurface,
                             ),
                           ),
                         ),
@@ -113,6 +113,7 @@ class _UploadScreenState extends State<UploadScreen> {
                                   width: 180,
                                   height: 180,
                                   fit: BoxFit.cover,
+                                  color: context.colorScheme.onSurface,
                                 ),
                               ),
                             Positioned(
@@ -159,7 +160,7 @@ class _UploadScreenState extends State<UploadScreen> {
                           child: Text(
                             "Your Name",
                             style: TextStyles.body.copyWith(
-                              color: context.colorScheme.tertiary,
+                              color: context.colorScheme.onSurface,
                             ),
                           ),
                         ),
@@ -167,6 +168,7 @@ class _UploadScreenState extends State<UploadScreen> {
                         CustomTextField(
                           controller: controller,
                           hintText: "Enter your name",
+                          
                         ),
                       ],
                     ),
