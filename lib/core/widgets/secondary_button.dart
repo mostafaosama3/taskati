@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+import 'package:taskati2/core/functions/extensions.dart';
+
+import '../styles/appcolor.dart';
+import '../styles/text_styles.dart';
+class SecondaryButton extends StatelessWidget {
+  const SecondaryButton({
+    super.key,
+    required this.text,
+    required this.onPressed,
+    this.width,
+    this.height,
+  });
+
+  final String text;
+  final Function() onPressed;
+  final double? width;
+  final double? height;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: context.colorScheme.secondary,
+        elevation: 0,
+        minimumSize: Size(width ?? double.infinity, height ?? 38),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+      onPressed: onPressed,
+      child: Text(
+        text,
+        style: TextStyles.caption1.copyWith(
+          fontWeight: FontWeight.w500,
+          color: context.theme.primaryColor,
+        ),
+      ),
+    );
+  }
+}
