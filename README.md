@@ -24,23 +24,31 @@
 - **Date & Time:** Intl, Date Picker Timeline
 - **UI Components:** Flutter Slidable, Percent Indicator
 
-  ## 📸 App Screenshots
+ 
+## 📸 App Screenshots
 
 ### ☀️ Light Mode
 
-<p align="center">
-  <img src="screenshots/light/home.png" width="250" alt="Taskati Light Mode Home Screen" />
-  <img src="screenshots/light/tasks.png" width="250" alt="Taskati Light Mode Tasks Screen" />
-  <img src="screenshots/light/profile.png" width="250" alt="Taskati Light Mode Profile Screen" />
-</p>
+<table>
+  <tr>
+    <td><img src="screenshots/Splash Light Mode.png" width="180" alt="Light Mode Splash" /></td>
+    <td><img src="screenshots/Light Mode Profile Screen.png" width="180" alt="Light Mode Profile" /></td>
+    <td><img src="screenshots/Light Mode Home Screen.png" width="180" alt="Light Mode Home" /></td>
+    <td><img src="screenshots/Light Mode Tasks Screen.png" width="180" alt="Light Mode Tasks" /></td>
+  </tr>
+</table>
 
 ### 🌙 Dark Mode
 
-<p align="center">
-  <img src="screenshots/dark/home.png" width="250" alt="Taskati Dark Mode Home Screen" />
-  <img src="screenshots/dark/tasks.png" width="250" alt="Taskati Dark Mode Tasks Screen" />
-  <img src="screenshots/dark/profile.png" width="250" alt="Taskati Dark Mode Profile Screen" />
-</p>
+<table>
+  <tr>
+    <td><img src="screenshots/Splash Dark Mode.png" width="180" alt="Dark Mode Splash" /></td>
+    <td><img src="screenshots/Dark Mode Profile Screen.png" width="180" alt="Dark Mode Profile" /></td>
+    <td><img src="screenshots/Dark Mode Home Screen.png" width="180" alt="Dark Mode Home" /></td>
+    <td><img src="screenshots/Dark Mode Tasks Screen.png" width="180" alt="Dark Mode Tasks" /></td>
+  </tr>
+</table>
+
 
 ## 🚀 Getting Started
 
