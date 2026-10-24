@@ -25,14 +25,14 @@ class _TaskBuilderState extends State<TaskBuilder>
     _tabController = TabController(length: 3, vsync: this);
   }
 
-  String SelectedDate = "";
+  String SelectedDate = DateFormat("dd MMM, yyyy").format(DateTime.now());
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
         spacing: 15,
         children: [
-            Daily_Progress(selecteddate: SelectedDate,),
+          Daily_Progress(selecteddate: SelectedDate),
           DatePicker(
             DateTime.now().subtract(const Duration(days: 3)),
             height: 90,
@@ -49,7 +49,7 @@ class _TaskBuilderState extends State<TaskBuilder>
               });
             },
           ),
-          
+
           TabBar(
             controller: _tabController,
             dividerHeight: 0,
@@ -92,9 +92,15 @@ class _TaskBuilderState extends State<TaskBuilder>
               controller: _tabController,
               physics: NeverScrollableScrollPhysics(),
               children: [
-                TaskListBuilder(SelectedDate: SelectedDate,taskstatus: .all,),
-                TaskListBuilder(SelectedDate: SelectedDate,taskstatus: .inProgress,),
-                TaskListBuilder(SelectedDate: SelectedDate,taskstatus: .completed,),
+                TaskListBuilder(SelectedDate: SelectedDate, taskstatus: .all),
+                TaskListBuilder(
+                  SelectedDate: SelectedDate,
+                  taskstatus: .inProgress,
+                ),
+                TaskListBuilder(
+                  SelectedDate: SelectedDate,
+                  taskstatus: .completed,
+                ),
               ],
             ),
           ),
@@ -118,7 +124,9 @@ class const CustomTab({
       width: double.infinity,
       height: double.infinity,
       decoration: BoxDecoration(
-        color: isSeletced ? context.theme.primaryColor : context.colorScheme.secondary,
+        color: isSeletced
+            ? context.theme.primaryColor
+            : context.colorScheme.secondary,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Center(
@@ -126,7 +134,9 @@ class const CustomTab({
           label,
           style: TextStyles.body.copyWith(
             fontWeight: .bold,
-            color: isSeletced ?context.theme.colorScheme.surfaceContainer : context.theme.primaryColor,
+            color: isSeletced
+                ? context.theme.colorScheme.surfaceContainer
+                : context.theme.primaryColor,
           ),
         ),
       ),

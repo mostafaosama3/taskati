@@ -11,7 +11,7 @@ import 'package:taskati2/core/styles/appcolor.dart';
 import 'package:taskati2/core/styles/text_styles.dart';
 
 class const Daily_Progress({super.key, required this.selecteddate}) extends StatelessWidget {
-  final String selecteddate;
+  final String? selecteddate;
   @override
   Widget build(BuildContext context) {
      return ValueListenableBuilder<Box<TaskModel>>(
@@ -41,7 +41,7 @@ class const Daily_Progress({super.key, required this.selecteddate}) extends Stat
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      DateFormat('EE, dd MMM').format(DateTime.now()),
+                      selecteddate??"Sat, 24 Oct",
                       style: TextStyles.body.copyWith(
                         color: context.colorScheme.secondary,
                         fontWeight: FontWeight.w600,
